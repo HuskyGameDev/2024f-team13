@@ -9,16 +9,15 @@ using UnityEngine.WSA;
 
 public class WalkScript : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public GameObject player;
-    public Animator animator;
-    public int speed, runSpeed, look_angle_offset;
-    private bool inW ,inA, inS, inD;
+    public  Rigidbody2D rb;
+    public  GameObject player;
+    public  Animator animator;
+    public  int speed, runSpeed, look_angle_offset;
     private int yVel, xVel;
-    private Vector2 aim;
     private float angle;
-    public static float playerX, playerY;
-    public static Vector3 playerPos; 
+    private bool inW ,inA, inS, inD;
+    private Vector2 aim, prevMousePosition;
+    public static Vector3 playerPos;
     
 
     // Start is called before the first frame update
@@ -59,17 +58,17 @@ public class WalkScript : MonoBehaviour
         } else { 
            rb.velocity = new Vector2(0,0); 
         }
-
+         
         //TURNING
+        aim = Input.mousePosition;
         Vector3 object_pos = Camera.main.WorldToScreenPoint(transform.position);
         if (inW || inA || inS || inD) {
             angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle + look_angle_offset);
-        } else {
-            aim = Input.mousePosition;
-            //Debug.Log("aim.y " + aim.y);
+
+        } else if (prevMousePosition != aim){ 
+           //Only aim at mouse if mouse moved since last frame other wise keep current rotation
             angle = Mathf.Atan2((aim.y - object_pos.y), (aim.x - object_pos.x)) * Mathf.Rad2Deg;
-            //Debug.Log("Angle y(" + (aim.y - object_pos.y) * Mathf.Rad2Deg);
             transform.rotation = Quaternion.Euler(0, 0, angle + look_angle_offset);
         }
 
@@ -80,8 +79,7 @@ public class WalkScript : MonoBehaviour
            animator.SetBool("walking", false); 
         }
         playerPos = rb.transform.position;
-        playerX = rb.transform.position.x;
-        playerY = rb.transform.position.y;
+        prevMousePosition = Input.mousePosition;
         
     }
 }
