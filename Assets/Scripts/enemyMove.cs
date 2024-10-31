@@ -7,10 +7,27 @@ public class enemyMove : MonoBehaviour{
    private Rigidbody2D rb2D;
    private float moveSpeed, angle;
    public  int look_angle_offset;
+   public enemyType type;
+
+   public enum enemyType {
+      small,
+      medium,
+      large
+   }
 
    void Start(){
-      moveSpeed = 0.01f;
-
+      switch (type){
+         case enemyType.large:
+            moveSpeed = 0.001f;
+            break;
+         case enemyType.medium:
+            moveSpeed = 0.005f;
+            break;
+         case enemyType.small:
+         default:
+            moveSpeed = 0.01f;
+            break;
+      }
    }
 
    void Awake(){
