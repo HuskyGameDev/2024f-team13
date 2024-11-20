@@ -58,9 +58,9 @@ public class enemyMove : MonoBehaviour{
       //);
       //transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
       //transform.right = WalkScript.playerPos - transform.position;
-      Vector3 dir = WalkScript.playerPos - transform.position;
-      angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
-      transform.rotation = Quaternion.AngleAxis(angle + look_angle_offset, Vector3.forward);
+      //Vector3 dir = WalkScript.playerPos - transform.position;
+      //angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+      //transform.rotation = Quaternion.AngleAxis(angle + look_angle_offset, Vector3.forward);
    }
    
 }
