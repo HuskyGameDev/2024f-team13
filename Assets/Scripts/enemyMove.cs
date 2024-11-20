@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class enemyMove : MonoBehaviour{
 
+   public enemyType type;
+   public  int look_angle_offset;
+
    private Rigidbody2D rb2D;
    private float moveSpeed, angle;
-   public  int look_angle_offset;
-   public enemyType type;
-
+   private int damage;
+   //private int yDirOffset, xDirOffset;
    public enum enemyType {
       small,
       medium,
@@ -19,24 +21,39 @@ public class enemyMove : MonoBehaviour{
       switch (type){
          case enemyType.large:
             moveSpeed = 0.001f;
+            damage = 3;
             break;
          case enemyType.medium:
             moveSpeed = 0.005f;
+            damage = 2;
             break;
          case enemyType.small:
          default:
+            damage = 1;
             moveSpeed = 0.01f;
             break;
       }
    }
 
+   void OnTriggerEnter2D(Collider2D enemyHit){
+   }
+
+   void onCollisionEnter2D(Collider2D enemyHit){
+      if (enemyHit.CompareTag("Player")){
+         WalkScript.health--;
+      }
+   }
+      
+
    void Awake(){
+     // GetComponent<Collider2D>().isTrigger = true;
    }
 
       // TODO Make movement stop if stuck 
     // Update is called once per frame
    void Update(){
       // Move towards player 
+
       if (WalkScript.playerPos.y < gameObject.transform.position.y){
          transform.position = transform.position - new Vector3(0f, moveSpeed, 0);
       }
