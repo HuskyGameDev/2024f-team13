@@ -18,8 +18,7 @@ public class playerSprite : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    { 
+   void Update() { 
       inW = Input.GetKey(KeyCode.W);
       inA = Input.GetKey(KeyCode.A);
       inS = Input.GetKey(KeyCode.S);
@@ -36,15 +35,15 @@ public class playerSprite : MonoBehaviour
          //Only aim at mouse if mouse moved since last frame other wise keep current rotation
          angle = Mathf.Atan2((aim.y - object_pos.y), (aim.x - object_pos.x)) * Mathf.Rad2Deg;
          transform.rotation = Quaternion.Euler(0, 0, angle + look_angle_offset);
-     }
+      }
+      prevMousePosition = aim;
 
-     //WALK ANIMATION
-     if (rb.velocity != Vector2.zero) { 
-        animator.SetBool("walking", true);
-     } else {
-        animator.SetBool("walking", false); 
-     }
-     prevMousePosition = aim;
-        
-    }
+      //WALK ANIMATION
+      if (rb.velocity != Vector2.zero) { 
+         animator.SetBool("walking", true);
+      } else {
+         animator.SetBool("walking", false); 
+      }
+
+   }
 }

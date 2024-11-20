@@ -13,7 +13,7 @@ public class WalkScript : MonoBehaviour
     public static Vector3 playerPos;
     public static int health;
     public GameObject player;
-    public  int speed, runSpeed;
+    public int speed, runSpeed;
 
     private int yVel, xVel;
     private bool inW ,inA, inS, inD;
@@ -22,13 +22,14 @@ public class WalkScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       health = (health <= 0) ? 100 : health;
-        UnityEngine.Cursor.lockState = CursorLockMode.Confined;
+       health = (health <= 0) ? 25 : health;
+       UnityEngine.Cursor.lockState = CursorLockMode.Confined;
     }
       
     // Update is called once per frame
     void Update()
     {
+       if (health == 0) Destroy(player);
         inW = Input.GetKey(KeyCode.W);
         inA = Input.GetKey(KeyCode.A);
         inS = Input.GetKey(KeyCode.S);

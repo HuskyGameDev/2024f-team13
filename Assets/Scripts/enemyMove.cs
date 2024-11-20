@@ -10,7 +10,6 @@ public class enemyMove : MonoBehaviour{
    private Rigidbody2D rb2D;
    private float moveSpeed, angle;
    private int damage;
-   //private int yDirOffset, xDirOffset;
    public enum enemyType {
       small,
       medium,
@@ -30,23 +29,21 @@ public class enemyMove : MonoBehaviour{
          case enemyType.small:
          default:
             damage = 1;
-            moveSpeed = 0.01f;
+            moveSpeed = 0.02f;
             break;
       }
    }
 
-   void OnTriggerEnter2D(Collider2D enemyHit){
-   }
-
-   void onCollisionEnter2D(Collider2D enemyHit){
-      if (enemyHit.CompareTag("Player")){
-         WalkScript.health--;
+   void OnCollisionEnter2D(Collision2D enemyHit){
+      Debug.Log("onCollisionEnter2D");
+      if (enemyHit.gameObject.CompareTag("Player")){
+         WalkScript.health -= damage;
+         //enemyHit.rigidbody.AddForce(transform.up * 500);
       }
    }
       
 
    void Awake(){
-     // GetComponent<Collider2D>().isTrigger = true;
    }
 
       // TODO Make movement stop if stuck 
@@ -67,14 +64,6 @@ public class enemyMove : MonoBehaviour{
          transform.position = transform.position - new Vector3(moveSpeed, 0f, 0);
       }
 
-      //TODO Figure out angel offset
-      // Look at player this was working then stopped I love it so much 
-     // Quaternion rotation = Quaternion.LookRotation(
-       //  WalkScript.playerPos - transform.position ,
-         //transform.TransformDirection(Vector3.up)
-      //);
-      //transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
-      //transform.right = WalkScript.playerPos - transform.position;
       Vector3 dir = WalkScript.playerPos - transform.position;
       angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
       transform.rotation = Quaternion.AngleAxis(angle + look_angle_offset, Vector3.forward);
