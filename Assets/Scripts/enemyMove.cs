@@ -8,7 +8,7 @@ public class enemyMove : MonoBehaviour{
    public  int look_angle_offset;
 
    private Rigidbody2D rb2D;
-   private float moveSpeed, angle;
+   private float moveSpeed, angle, sightRange;
    private int damage;
    public enum enemyType {
       small,
@@ -19,17 +19,20 @@ public class enemyMove : MonoBehaviour{
    void Start(){
       switch (type){
          case enemyType.large:
-            moveSpeed = 0.001f;
+            moveSpeed = 1f;
             damage = 3;
+            sightRange = 10f;
             break;
          case enemyType.medium:
-            moveSpeed = 0.005f;
+            moveSpeed = 1.75f;
             damage = 2;
+            sightRange = 7f;
             break;
          case enemyType.small:
          default:
             damage = 1;
-            moveSpeed = 0.02f;
+            moveSpeed = 2.5f;
+            sightRange = 5f;
             break;
       }
    }
@@ -37,10 +40,16 @@ public class enemyMove : MonoBehaviour{
    void OnCollisionEnter2D(Collision2D enemyHit){
       Debug.Log("onCollisionEnter2D");
       if (enemyHit.gameObject.CompareTag("Player")){
-         WalkScript.health -= damage;
-         //enemyHit.rigidbody.AddForce(transform.up * 500);
+         Debug.Log("Twas a player");
+
+         if(enemyHit.gameObject.TryGetComponent<healthScript>(out healthScript hp)){
+            Debug.Log("hurt the player");
+            hp.hurt(damage);
+         }
       }
    }
+
+   
       
 
    void Awake(){
@@ -49,24 +58,22 @@ public class enemyMove : MonoBehaviour{
       // TODO Make movement stop if stuck 
     // Update is called once per frame
    void Update(){
-      // Move towards player 
+      // Calculate the direction to the player
+      Vector3 direction = WalkScript.playerPos - transform.position;
 
-      if (WalkScript.playerPos.y < gameObject.transform.position.y){
-         transform.position = transform.position - new Vector3(0f, moveSpeed, 0);
-      }
-      if (WalkScript.playerPos.y > gameObject.transform.position.y){
-         transform.position = transform.position + new Vector3(0f, moveSpeed, 0);
-      }
-      if (WalkScript.playerPos.x > gameObject.transform.position.x){
-         transform.position = transform.position + new Vector3(moveSpeed, 0f, 0);
-      }
-      if (WalkScript.playerPos.x < gameObject.transform.position.x){
-         transform.position = transform.position - new Vector3(moveSpeed, 0f, 0);
-      }
+      if (direction.magnitude < sightRange) {
+         // Normalize becuase I don't know lin alg that well 
+         direction.Normalize();
 
-      Vector3 dir = WalkScript.playerPos - transform.position;
-      angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
-      transform.rotation = Quaternion.AngleAxis(angle + look_angle_offset, Vector3.forward);
+         // Move the enemy towards the player
+         transform.position += direction * moveSpeed * Time.deltaTime;
+
+         // Calculate the angle between the enemy and the player 
+         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+         // Apply the rotation 
+         transform.rotation = Quaternion.AngleAxis(angle + look_angle_offset, Vector3.forward);
+      }
    }
    
 }

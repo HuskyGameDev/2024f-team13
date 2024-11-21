@@ -7,35 +7,40 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.WSA;
 
+/** For anyone who comes here in a later semester good luck I have no clue
+ * what is going on here someone was in our team wrote the movement WalkScript 
+ * and dropped the course and I never used unity before so I didn't dare touch
+ * any of this and just been trying to impliment things enough to show an idea
+ * of a game
+ */ 
+
+
+
 public class WalkScript : MonoBehaviour
 {
+    public GameObject player;
     public Rigidbody2D rb;
     public static Vector3 playerPos;
-    public static int health;
-    public GameObject player;
     public int speed, runSpeed;
-
+    [SerializeField] AudioSource sandSounds;
+    
     private int yVel, xVel;
     private bool inW ,inA, inS, inD;
     
-
     // Start is called before the first frame update
     void Start()
     {
-       health = (health <= 0) ? 25 : health;
        UnityEngine.Cursor.lockState = CursorLockMode.Confined;
     }
       
     // Update is called once per frame
     void Update()
     {
-       if (health == 0) Destroy(player);
         inW = Input.GetKey(KeyCode.W);
         inA = Input.GetKey(KeyCode.A);
         inS = Input.GetKey(KeyCode.S);
         inD = Input.GetKey(KeyCode.D);
 
-         Debug.Log("health " + health);
 
         //MOVE
         if (inW ^ inS) { //upDown

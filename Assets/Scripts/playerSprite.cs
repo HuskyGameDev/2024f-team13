@@ -11,10 +11,11 @@ public class playerSprite : MonoBehaviour
    private float angle;
    private bool inW ,inA, inS, inD;
    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+      rb = GetComponentInParent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,6 @@ public class playerSprite : MonoBehaviour
       inA = Input.GetKey(KeyCode.A);
       inS = Input.GetKey(KeyCode.S);
       inD = Input.GetKey(KeyCode.D);
-      rb = GetComponentInParent<Rigidbody2D>();
 
       aim = Input.mousePosition;
       Vector3 object_pos = Camera.main.WorldToScreenPoint(transform.position);
