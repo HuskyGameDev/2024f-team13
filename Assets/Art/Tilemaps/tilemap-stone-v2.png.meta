@@ -94,19 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -150,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e258c858d1636449a092d2f02f609cf
-      internalID: 516938230
+      spriteID: 21e6adf3910b47849849426ab35aeab2
+      internalID: 1451936765
       vertices: []
       indices: 
       edges: []
@@ -171,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 951655a05b929974286dea390073d7d4
-      internalID: -36108342
+      spriteID: c27723b3dc680984c90d734dd99b8e0a
+      internalID: 1518656688
       vertices: []
       indices: 
       edges: []
@@ -192,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c419dc5fde05b54aaf164a6d3c408b8
-      internalID: -1376274436
+      spriteID: 366745b474064744bbb952ad53f40504
+      internalID: -2123469174
       vertices: []
       indices: 
       edges: []
@@ -213,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc9f957014e7e4545b9f0022626e381f
-      internalID: 591738303
+      spriteID: b736ffa3c5a1f2a458b2d2339292a390
+      internalID: 1967761587
       vertices: []
       indices: 
       edges: []
@@ -234,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6c893ebc49e2c54e88b690ad6016715
-      internalID: -1460998824
+      spriteID: 71c9c28a7ebc3074090864ca11d334cc
+      internalID: 1910503373
       vertices: []
       indices: 
       edges: []
@@ -255,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d665fbd9b58bef74aac4cfb62de8786d
-      internalID: -247848366
+      spriteID: 0036af87372dfe447a2049ceca0cb6b7
+      internalID: -1278328420
       vertices: []
       indices: 
       edges: []
@@ -276,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 512ae6ca0da15a542ba760de9b6e12f0
-      internalID: -1077416886
+      spriteID: 043740e7505836d40897d6c1e3a1d813
+      internalID: 1251711283
       vertices: []
       indices: 
       edges: []
@@ -297,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 871d588160e689c4499d11df58bab27a
-      internalID: 671479407
+      spriteID: d8a6838ba5455a2478bf7ccef35ea804
+      internalID: 1948130863
       vertices: []
       indices: 
       edges: []
@@ -307,8 +294,8 @@ TextureImporter:
       name: tilemap-stone-v2_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 256
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -318,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16dc9a5c16c9e9843a6df7fc2ee94443
-      internalID: -256116143
+      spriteID: b1ab8d08da2815848bf336a9090bd91c
+      internalID: 951829082
       vertices: []
       indices: 
       edges: []
@@ -328,7 +315,7 @@ TextureImporter:
       name: tilemap-stone-v2_9
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 64
         width: 32
         height: 32
@@ -339,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be3b10696337e3f43a152fc5db091e29
-      internalID: -1248763693
+      spriteID: f216447ef4bd9324d9ffb3f9f4e7bb09
+      internalID: -2096891806
       vertices: []
       indices: 
       edges: []
@@ -349,7 +336,7 @@ TextureImporter:
       name: tilemap-stone-v2_10
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 64
         width: 32
         height: 32
@@ -360,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e7df900f08a4f7418115e88b5bf5927
-      internalID: 206281264
+      spriteID: 521a1935842928e46b7c34c38d93e99e
+      internalID: 654242719
       vertices: []
       indices: 
       edges: []
@@ -370,7 +357,7 @@ TextureImporter:
       name: tilemap-stone-v2_11
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 64
         width: 32
         height: 32
@@ -381,8 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50f1af95ae64da243b250ff169ff4a69
-      internalID: 246696186
+      spriteID: 27978094f7f1d23408e6aceb4d993ccc
+      internalID: -1852639703
       vertices: []
       indices: 
       edges: []
@@ -391,7 +378,7 @@ TextureImporter:
       name: tilemap-stone-v2_12
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 64
         width: 32
         height: 32
@@ -402,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf3f1c81346ffc4a8ff53f563793fa7
-      internalID: 1819497115
+      spriteID: 56263f629b3a8b74ebe506518c81e2ea
+      internalID: 1088958214
       vertices: []
       indices: 
       edges: []
@@ -412,7 +399,7 @@ TextureImporter:
       name: tilemap-stone-v2_13
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 64
         width: 32
         height: 32
@@ -423,8 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de4ab61759d7c6346aeb89632cd1975f
-      internalID: 1079787904
+      spriteID: 33c51c36dac13cb4e9ab59169948c53f
+      internalID: -1044586907
       vertices: []
       indices: 
       edges: []
@@ -433,6 +420,27 @@ TextureImporter:
       name: tilemap-stone-v2_14
       rect:
         serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c28dad14bb112f4a824e253bdf0b02d
+      internalID: 1840644931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap-stone-v2_15
+      rect:
+        serializedVersion: 2
         x: 192
         y: 64
         width: 32
@@ -444,29 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70e4155510613344e8001401a0c7bcce
-      internalID: 1189404134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilemap-stone-v2_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 379db43ac158f7849ae9122c0cfe943d
-      internalID: -752669842
+      spriteID: 26f8c122c844c44499c481493be8dc23
+      internalID: 981647624
       vertices: []
       indices: 
       edges: []
@@ -475,6 +462,48 @@ TextureImporter:
       name: tilemap-stone-v2_16
       rect:
         serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f666d845270144409d070b37bc15242
+      internalID: -1196628493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap-stone-v2_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef850ef6cccc674f852afb92d01f1a5
+      internalID: -2116366069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap-stone-v2_18
+      rect:
+        serializedVersion: 2
         x: 32
         y: 32
         width: 32
@@ -486,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 918d32bddce6e834699331162ede0c37
-      internalID: 445458180
+      spriteID: 1533741af758d084ca49debc0b7c572d
+      internalID: 113043822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_17
+      name: tilemap-stone-v2_19
       rect:
         serializedVersion: 2
         x: 64
@@ -507,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a29ea98d44f56ff48bbb69616031de8f
-      internalID: -1579244648
+      spriteID: fc99a26bf2927a34da34855435391b72
+      internalID: -11671666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_18
+      name: tilemap-stone-v2_20
       rect:
         serializedVersion: 2
         x: 96
@@ -528,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57e7b057afba1c54296fd8be682b33b9
-      internalID: -126248065
+      spriteID: 07e0cdffd210a9e4ebb7e03162a202ba
+      internalID: 13629629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_19
+      name: tilemap-stone-v2_21
       rect:
         serializedVersion: 2
         x: 128
@@ -549,14 +578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d859aff30fcd10446bb7ccde7726be36
-      internalID: 1638959584
+      spriteID: b477d620a6e8a2c44a820bb0f4f08ef6
+      internalID: -494864178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_20
+      name: tilemap-stone-v2_22
       rect:
         serializedVersion: 2
         x: 160
@@ -570,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 710b1e9c675e21b41a48c625b5cc2f62
-      internalID: 912849251
+      spriteID: f80e942ca75a18c4c8f11c42e7983c58
+      internalID: -640491861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_21
+      name: tilemap-stone-v2_23
       rect:
         serializedVersion: 2
         x: 192
@@ -591,14 +620,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f19e3e78d2678749a4fe3610192036d
-      internalID: 825258097
+      spriteID: d47e32550a86e3d42b583d87e81c1b68
+      internalID: 1915791189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_22
+      name: tilemap-stone-v2_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5061a8ec586951b49aacc9af2ba53e98
+      internalID: 18792971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap-stone-v2_25
       rect:
         serializedVersion: 2
         x: 0
@@ -612,14 +662,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe1434a79aca38d4691430b217d2d561
-      internalID: 472782709
+      spriteID: fc89451ee9734434c8a0abfcb1e98381
+      internalID: -2070307606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_23
+      name: tilemap-stone-v2_26
       rect:
         serializedVersion: 2
         x: 32
@@ -633,14 +683,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba119b88df59c64ab6e80b1a65efbe2
-      internalID: 939921850
+      spriteID: 02418157e0ad40d49a3809a1efef6c82
+      internalID: -1224268531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_24
+      name: tilemap-stone-v2_27
       rect:
         serializedVersion: 2
         x: 64
@@ -654,14 +704,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d36f4b7d5de4f42afc75640f8fe3e0
-      internalID: 654562554
+      spriteID: f36de261a42bc6649ac09df2ec4ec435
+      internalID: -1988054830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_25
+      name: tilemap-stone-v2_28
       rect:
         serializedVersion: 2
         x: 96
@@ -675,14 +725,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f66148af8eef68f4283a0293c263c836
-      internalID: -972855739
+      spriteID: e8580d30a2810714e94046a8f8390b63
+      internalID: 3124421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_26
+      name: tilemap-stone-v2_29
       rect:
         serializedVersion: 2
         x: 128
@@ -696,14 +746,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cd40d6fd93b5404f8718e0bf8fd10f1
-      internalID: 802621591
+      spriteID: 0562272be4b32d34b91c581329073912
+      internalID: 1299989419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_27
+      name: tilemap-stone-v2_30
       rect:
         serializedVersion: 2
         x: 160
@@ -717,14 +767,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf901ffca0631f479e8b43f335f5e6d
-      internalID: 60184079
+      spriteID: b15ccef1c95af654baf0f9e796ea0c2b
+      internalID: -673777483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap-stone-v2_28
+      name: tilemap-stone-v2_31
       rect:
         serializedVersion: 2
         x: 192
@@ -738,8 +788,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37f414dedb2c0bc4ca077507fa6f6b55
-      internalID: -2093101223
+      spriteID: f82717e8353aa8a4da2d420f62921df9
+      internalID: -2029060993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap-stone-v2_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c325d968345b96945920c9d5ed10b4e8
+      internalID: 295662016
       vertices: []
       indices: 
       edges: []
@@ -755,35 +826,39 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tilemap-stone-v2_0: 516938230
-      tilemap-stone-v2_1: -36108342
-      tilemap-stone-v2_10: 206281264
-      tilemap-stone-v2_11: 246696186
-      tilemap-stone-v2_12: 1819497115
-      tilemap-stone-v2_13: 1079787904
-      tilemap-stone-v2_14: 1189404134
-      tilemap-stone-v2_15: -752669842
-      tilemap-stone-v2_16: 445458180
-      tilemap-stone-v2_17: -1579244648
-      tilemap-stone-v2_18: -126248065
-      tilemap-stone-v2_19: 1638959584
-      tilemap-stone-v2_2: -1376274436
-      tilemap-stone-v2_20: 912849251
-      tilemap-stone-v2_21: 825258097
-      tilemap-stone-v2_22: 472782709
-      tilemap-stone-v2_23: 939921850
-      tilemap-stone-v2_24: 654562554
-      tilemap-stone-v2_25: -972855739
-      tilemap-stone-v2_26: 802621591
-      tilemap-stone-v2_27: 60184079
-      tilemap-stone-v2_28: -2093101223
-      tilemap-stone-v2_3: 591738303
-      tilemap-stone-v2_4: -1460998824
-      tilemap-stone-v2_5: -247848366
-      tilemap-stone-v2_6: -1077416886
-      tilemap-stone-v2_7: 671479407
-      tilemap-stone-v2_8: -256116143
-      tilemap-stone-v2_9: -1248763693
+      tilemap-stone-v2_0: 1451936765
+      tilemap-stone-v2_1: 1518656688
+      tilemap-stone-v2_10: 654242719
+      tilemap-stone-v2_11: -1852639703
+      tilemap-stone-v2_12: 1088958214
+      tilemap-stone-v2_13: -1044586907
+      tilemap-stone-v2_14: 1840644931
+      tilemap-stone-v2_15: 981647624
+      tilemap-stone-v2_16: -1196628493
+      tilemap-stone-v2_17: -2116366069
+      tilemap-stone-v2_18: 113043822
+      tilemap-stone-v2_19: -11671666
+      tilemap-stone-v2_2: -2123469174
+      tilemap-stone-v2_20: 13629629
+      tilemap-stone-v2_21: -494864178
+      tilemap-stone-v2_22: -640491861
+      tilemap-stone-v2_23: 1915791189
+      tilemap-stone-v2_24: 18792971
+      tilemap-stone-v2_25: -2070307606
+      tilemap-stone-v2_26: -1224268531
+      tilemap-stone-v2_27: -1988054830
+      tilemap-stone-v2_28: 3124421
+      tilemap-stone-v2_29: 1299989419
+      tilemap-stone-v2_3: 1967761587
+      tilemap-stone-v2_30: -673777483
+      tilemap-stone-v2_31: -2029060993
+      tilemap-stone-v2_32: 295662016
+      tilemap-stone-v2_4: 1910503373
+      tilemap-stone-v2_5: -1278328420
+      tilemap-stone-v2_6: 1251711283
+      tilemap-stone-v2_7: 1948130863
+      tilemap-stone-v2_8: 951829082
+      tilemap-stone-v2_9: -2096891806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
