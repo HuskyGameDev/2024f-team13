@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.WSA;
 
 /** For anyone who comes here in a later semester good luck I have no clue
  * what is going on here someone was in our team wrote the movement WalkScript 
