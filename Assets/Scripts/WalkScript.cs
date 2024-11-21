@@ -7,29 +7,36 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.WSA;
 
+/** For anyone who comes here in a later semester good luck I have no clue
+ * what is going on here someone was in our team wrote the movement WalkScript 
+ * and dropped the course and I never used unity before so I didn't dare touch
+ * any of this and just been trying to impliment things enough to show an idea
+ * of a game
+ */ 
+
+
+
 public class WalkScript : MonoBehaviour
 {
-    public Rigidbody2D rb;
     public GameObject player;
     public Animator animator;
-    public int speed, runSpeed; // look_angle_offset;
-    private int yVel, xVel;
-    //private float angle;
-    private bool inW, inA, inS, inD;
-    //private Vector2 aim, prevMousePosition;
-    public static Vector2 playerPos;
-
-    Vector2 movement;
+    public Rigidbody2D rb;
+    public static Vector3 playerPos;
+    public int speed, runSpeed;
+    [SerializeField] AudioSource sandSounds;
     public Vector2 targetPosition;
-
-
+    Vector2 movement;
+    
+    private int yVel, xVel;
+    private bool inW ,inA, inS, inD;
+    
     // Start is called before the first frame update
     void Start()
     {
-        UnityEngine.Cursor.lockState = CursorLockMode.Confined;
-        animator = gameObject.GetComponent<Animator>();
+       UnityEngine.Cursor.lockState = CursorLockMode.Confined;
+      animator = gameObject.GetComponent<Animator>();
     }
-
+      
     // Update is called once per frame
     void Update()
     {
@@ -135,40 +142,14 @@ public class WalkScript : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }
 
-        //TURNING
-        //aim = Input.mousePosition;
-        //Vector3 object_pos = Camera.main.WorldToScreenPoint(transform.position);
-        //if (inW || inA || inS || inD)
-        //{
-        //    angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
-        //    transform.rotation = Quaternion.Euler(0, 0, angle + look_angle_offset);
-
-        //}
-        //else if (prevMousePosition != aim)
-        //{
-        //    //Only aim at mouse if mouse moved since last frame other wise keep current rotation
-        //    angle = Mathf.Atan2((aim.y - object_pos.y), (aim.x - object_pos.x)) * Mathf.Rad2Deg;
-        //    transform.rotation = Quaternion.Euler(0, 0, angle + look_angle_offset);
-        //}
-
         targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         Vector2 targetDirection = new Vector2(targetPosition.x - transform.position.x, targetPosition.y - transform.position.y);
         animator.SetFloat("Horizontal", targetDirection.x);
         animator.SetFloat("Vertical", targetDirection.y);
 
-        //WALK ANIMATION
-        //if (rb.velocity != Vector2.zero)
-        //{
-        //    animator.SetBool("walking", true);
-        //}
-        //else
-        //{
-        //    animator.SetBool("walking", false);
-        //}
-        //playerPos = rb.transform.position;
         //prevMousePosition = Input.mousePosition;
-
+        playerPos = rb.transform.position;  
     }
 
 }
