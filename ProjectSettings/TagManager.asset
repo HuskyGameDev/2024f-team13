@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - WALL
-  - 
+  - Door
   - 
   - 
   - 
@@ -50,6 +50,15 @@ TagManager:
   - name: Enemies
     uniqueID: 3245731429
     locked: 0
+  - name: Door
+    uniqueID: 3899252357
+    locked: 0
+  - name: Pickupables
+    uniqueID: 1981233117
+    locked: 0
   - name: Walls
     uniqueID: 3240704059
+    locked: 0
+  - name: Wall Details
+    uniqueID: 1868364683
     locked: 0

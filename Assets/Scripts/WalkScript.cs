@@ -36,9 +36,11 @@ public class WalkScript : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("MoveHorizontal", movement.x);
-        animator.SetFloat("MoveVertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        inW = Input.GetKey(KeyCode.W);
+        inA = Input.GetKey(KeyCode.A);
+        inS = Input.GetKey(KeyCode.S);
+        inD = Input.GetKey(KeyCode.D);
 
         if (animator != null)
         {
@@ -47,16 +49,54 @@ public class WalkScript : MonoBehaviour
                 animator.SetTrigger("Swipe");
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(1))
             {
                 animator.SetTrigger("Shoot");
             }
         }
 
-        inW = Input.GetKey(KeyCode.W);
-        inA = Input.GetKey(KeyCode.A);
-        inS = Input.GetKey(KeyCode.S);
-        inD = Input.GetKey(KeyCode.D);
+        if (movement.x > 0 && movement.y > 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x > 0 && movement.y == 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x > 0 && movement.y < 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x == 0 && movement.y < 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x < 0 && movement.y < 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x < 0 && movement.y == 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x < 0 && movement.y > 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+        else if (movement.x == 0 && movement.y > 0)
+        {
+            animator.SetFloat("MoveHorizontal", movement.x);
+            animator.SetFloat("MoveVertical", movement.y);
+        }
+
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
         //MOVE
         if (inW ^ inS)
