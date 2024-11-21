@@ -9,8 +9,8 @@ public class enemyMove : MonoBehaviour
    public  int look_angle_offset;
    [SerializeField] GameObject player;
 
-   private Rigidbody2D rb2D;
-   private float moveSpeed, angle, sightRange; //distance
+   private Rigidbody2D rb;
+   private float moveSpeed, angle, sightRange, distance;
    private int damage;
    int animLayer = 0;
 
